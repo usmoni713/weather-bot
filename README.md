@@ -1,94 +1,51 @@
-# WeatherBot
 
-![GitHub last commit](https://img.shields.io/github/last-commit/lesskop/shtosh-weather-bot?style=flat-square)
-![GitHub](https://img.shields.io/github/license/lesskop/shtosh-weather-bot?style=flat-square)
-![GitHub repo size](https://img.shields.io/github/repo-size/lesskop/shtosh-weather-bot?style=flat-square)
-[![Youtube views](https://img.shields.io/youtube/views/9cOnJLpwbpU?style=social)](https://www.youtube.com/watch?v=9cOnJLpwbpU)
 
-Telegram bot that can get the current weather from your IP address
+**Weather Bot**
 
-![demo](demo.gif)
+Простой бот погоды, который получает текущую погоду по вашему IP-адресу.
 
-## Getting started
+**Функции**
 
-1. Clone this repository to your local machine:
+* Получает текущую погоду с помощью API OpenWeatherMap
+* Отображает температуру, описание погоды, направление ветра и скорость ветра
+* Отображает время восхода и заката солнца
+* Поддерживает команду помощи для отображения возможностей бота
 
-```bash
-git clone https://github.com/lesskop/shtosh-weather-bot.git
-```
+**Установка**
 
-2. Install Python 3.10+ version
+1. Клонируйте репозиторий: `git clone https://github.com/your-username/weather-bot.git`
+2. Установите зависимости: `pip install -r requirements.txt`
+3. Настройте свой ключ API OpenWeatherMap: `cp config.py.example config.py` и введите свой ключ API
+4. Запустите бота: `python bot.py`
 
-3. Create a virtual environment. Not necessary, but highly recommended.
+**Использование**
 
-```bash
-python -m venv venv
-```
+1. Начните разговор с ботом
+2. Отправьте команду `/help` для отображения возможностей бота
+3. Отправьте команду `/weather` для получения текущей погоды
+4. Отправьте команду `/wind` для получения направления и скорости ветра
+5. Отправьте команду `/sun_time` для получения времени восхода и заката солнца
 
-Activate it:
+**Ключи API**
 
-- Windows
+* Ключ API OpenWeatherMap: получите на [https://home.openweathermap.org/api_keys](https://home.openweathermap.org/api_keys)
 
-```bash
-venv\Scripts\activate
-```
+**Зависимости**
 
-- Linux/macOS
+* `aiogram` для API Telegram-бота
+* `aiohttp` для отправки запросов API
+* `dataclasses` для моделирования данных
+* `enum` для перечислений
 
-```bash
-source venv/bin/activate
-```
+**Лицензия**
 
-4. Install requirements:
+Лицензия MIT
 
-```bash
-pip install -r requirements.txt
-```
+**Вклад**
 
-5. Create an `.env` file in the root of your project directory and add your Telegram bot API token:
+Вклады приветствуются! Отправьте pull-запросы или сообщения об ошибках.
 
-```
-BOT_API_TOKEN=bot-token-here
-```
+**Благодарности**
 
-6. Create an account on [OpenWeatherMap](https://home.openweathermap.org/users/sign_up)
-
-*Hint: you can use [temporary mail](https://tempail.com/en/) :)*
-
-Сopy and paste the API key into `.env` file
-
-```
-WEATHER_API=api-key-here
-```
-
-7. Run [bot.py](src/bot.py) from project directory:
-
-```bash
-python src/bot.py
-```
-
-or
-
-```bash
-cd src
-python bot.py
-```
-
-## Usage
-
-This Telegram bot supports the following commands:
-
-* `/start` - Start the bot and get a welcome message with the weather at your location.
-* `/help` - Display the available commands.
-* `/weather` - Display the weather.
-* `/wind` - Display wind speed and direction.
-* `/sun_time` - Display sunrise and sunset times.
-
-## License
-
-This Telegram bot is open source and available under the [MIT License](LICENCE).
-
----
-[YouTube video](https://youtu.be/9cOnJLpwbpU)
-
-[Статья на Хабре](https://habr.com/p/684038/)
+* API OpenWeatherMap за предоставление данных о погоде
+* Библиотека aiogram за предоставление функциональности API Telegram-бота
