@@ -1,4 +1,4 @@
-# ShtoshWeatherBot
+# WeatherBot
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/lesskop/shtosh-weather-bot?style=flat-square)
 ![GitHub](https://img.shields.io/github/license/lesskop/shtosh-weather-bot?style=flat-square)
